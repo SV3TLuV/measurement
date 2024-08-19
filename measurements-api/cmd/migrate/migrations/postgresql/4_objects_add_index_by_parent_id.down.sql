@@ -1,0 +1,1 @@
+DROP INDEX objects_by_parent_id_idx;

@@ -1,0 +1,1 @@
+CREATE INDEX CONCURRENTLY user_posts_by_user_id_idx ON user_posts (user_id);

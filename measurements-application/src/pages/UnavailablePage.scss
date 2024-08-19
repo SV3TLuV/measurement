@@ -1,0 +1,26 @@
+.unavailable-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100wh;
+  min-height: 100vh;
+
+  .ant-result {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+
+    .ant-result-extra {
+      margin-top: 0;
+    }
+
+    .timer {
+      margin-bottom: 16px;
+    }
+
+    .actions {
+
+    }
+  }
+}

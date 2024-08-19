@@ -1,0 +1,37 @@
+.statistic-card {
+  .statistic-card-online-status {
+    margin-bottom: 20px;
+  }
+
+  .statistic-card-scheduler-status {
+    margin-bottom: 20px;
+  }
+
+  .statistic-card-base-info {
+    margin-bottom: 20px;
+  }
+
+  .statistic-card-collecting-info {
+    margin-bottom: 20px;
+
+    .last-collecting-info {
+      margin-right: 20px;
+    }
+
+    .next-collecting-info {
+
+    }
+  }
+
+  .statistic-card-filters {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .statistic-card-filters-select {
+      width: 160px;
+    }
+  }
+
+  .statistic-card-chart {
+  }
+}

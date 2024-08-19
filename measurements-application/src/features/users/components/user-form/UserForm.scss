@@ -1,0 +1,37 @@
+.user-modal {
+  .ant-modal-content {
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+  }
+
+  .ant-modal-body {
+    overflow-y: auto;
+  }
+
+  .steps-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+  }
+
+  .steps-action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .back-button {
+      margin-right: auto;
+      color: blue;
+    }
+
+    .next-button {
+      margin-left: auto;
+      color: blue;
+    }
+
+    .done-button {
+      margin-left: auto;
+      color: blue;
+    }
+  }
+}

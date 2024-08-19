@@ -1,0 +1,9 @@
+.configuration-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 100wh;
+  min-height: calc(100vh - 64px);
+}

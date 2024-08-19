@@ -1,0 +1,14 @@
+.posts-table {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .posts-table-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .posts-table-container {
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,70 @@
+.measurements-table {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .measurements-table-toolbar {
+    margin: 0 0 16px 16px;
+
+    .measurements-table-toolbar-select {
+      width: 160px;
+    }
+  }
+
+  .measurements-table-cell {
+    text-align: center;
+    width: 180px;
+  }
+
+  .ant-table-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: auto;
+  }
+}
+
+.warning {
+  color: #ffa200;
+}
+
+.dangerous {
+  color: #d40000;
+}
+
+.no_data {
+  background: #eeeeee;
+}
+
+.adjustment {
+  background: #ccccff;
+}
+.reliable {
+  background: #ccffcc;
+}
+
+.doubtful {
+  background: #ffffcc;
+}
+
+.out_of_range {
+  background: #ffe5ba;
+}
+
+.rejected {
+  background: #ffcccc;
+}
+
+.calculation {
+  background: #eeeef8;
+}

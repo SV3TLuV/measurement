@@ -1,0 +1,1 @@
+DROP INDEX measurements_by_object_id_idx;

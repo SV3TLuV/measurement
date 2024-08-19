@@ -1,0 +1,32 @@
+.post-info-card-container {
+  position: absolute;
+  display: block;
+  z-index: 1000;
+
+  .post-info-card-title {
+    text-align: center;
+  }
+
+  .no-margin {
+    margin: 0;
+    padding: 0;
+  }
+
+  .measurement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .measurement-row {
+    display: contents;
+  }
+
+  .measurement-row p {
+    text-align: left;
+  }
+
+  .full-width {
+    grid-column: span 3;
+  }
+}

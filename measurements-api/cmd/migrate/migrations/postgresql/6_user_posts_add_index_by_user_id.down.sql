@@ -1,0 +1,1 @@
+DROP INDEX user_posts_by_user_id_idx;

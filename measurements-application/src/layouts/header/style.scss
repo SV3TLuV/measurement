@@ -1,0 +1,16 @@
+.app-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #1677ff !important;
+
+  .app-header-user-info {
+    display: flex;
+    align-items: center;
+    color: white !important;
+
+    .app-header-user-info-login {
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+CREATE INDEX CONCURRENTLY objects_by_parent_id_idx ON objects (parent_id);

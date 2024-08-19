@@ -1,0 +1,1 @@
+CREATE INDEX CONCURRENTLY measurements_by_object_id_idx ON measurements (object_id);

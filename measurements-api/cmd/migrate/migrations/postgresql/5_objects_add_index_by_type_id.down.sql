@@ -1,0 +1,1 @@
+DROP INDEX objects_by_type_id_idx;

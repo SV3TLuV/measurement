@@ -1,0 +1,91 @@
+services:
+
+  proxy:
+    container_name: measurements_proxy
+    image: measurements_proxy
+    build:
+      network: host
+      context: ./Nginx
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - TZ=Europe/Moscow
+    depends_on:
+      - database
+      - api
+      - redis
+      - react
+    logging:
+      driver: none
+    restart: always
+
+  database:
+    container_name: measurements_database
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    build:
+      network: host
+    environment:
+      - POSTGRES_PASSWORD=P@ssw0rd
+      - POSTGRES_DB=measurements
+      - TZ=Europe/Moscow
+    volumes:
+      - measurements_postgres:/var/lib/postgresql/data
+    logging:
+      driver: none
+    restart: always
+
+  redis:
+    container_name: measurements_redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    build:
+      network: host
+      context: ./assets/redis
+    volumes:
+      - measurements_redis:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    logging:
+      driver: none
+    restart: always
+
+  api:
+    container_name: measurements_api
+    image: measurements_api
+    build:
+      network: host
+      context: measurements-api
+    ports:
+      - "8081:80"
+    depends_on:
+      - database
+      - redis
+    logging:
+      driver: none
+    restart: always
+
+  react:
+    container_name: measurements_react
+    image: measurements_react
+    build:
+      network: host
+      context: ./measurements-application
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Europe/Moscow
+    depends_on:
+      - api
+    ports:
+      - "8082:80"
+    logging:
+      driver: none
+    stdin_open: true
+    restart: always
+
+volumes:
+  measurements_redis:
+  measurements_postgres:
